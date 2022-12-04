@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
+    <script>
+        import { Storage } from "@aws-amplify/storage";
+        await Storage.put("test.html", "Hello World");
+    </script>
 </head>
 <body>
     This is the Root
     <div>THis is also the root</div>
 
-    <form action="https://wdv351-storage-0d1938fc105506-staging.s3.us-east-2.amazonaws.com/private/connectPDO.php">
+    <form action="test.html">
         <button type="submit">Submit</button>
     </form>
 </body>
