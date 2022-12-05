@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="css/global.css">
     <script src="js/navbar.js"></script>
     <script>
-        import { 
-            Email 
-            } from './ui-components';
         pageLoad = () =>
         {
             addCollapseControl();
@@ -37,9 +34,13 @@
           </ul>
         </nav>
     </header>
-    <Email
-  onSubmit={fields => { /* Handle form submission */}}
-/>
+    <main>
+        <form action="https://formspree.io/monesheim@monesheim.com">
+            <input type="text" name="name">
+            <input type="email" name="_replyto">
+            <input type="submit" value="Send">
+        </form>
+    </main>
     <footer>
         <p>this is the footer</p>
     </footer>
