@@ -17,7 +17,26 @@
             window.onresize = checkWidth;
             sessionStorage.setItem("valid", "false");
             
+            sendEmail = () =>
+            {
+                var xmlhttp = new XMLHttpRequest();
+
+                xmlhttp.open("GET","../php/email.php",true);
+
+                xmlhttp.send();
+
+                xmlhttp.onreadystatechange = () =>{
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                    let confirmation = xmlhttp.responseText;
+                    console.log(confirmation);
+                    }
+} 
+            }
             
+            
+            let form = document.querySelector("form");
+            form.onsubmit = sendEmail;
 
         }
     </script>
@@ -35,7 +54,7 @@
         </nav>
     </header>
     <main>
-       <form action="../php/email.php">
+       <form>
         <input type="text" name="fname" id="fname">
         <input type="submit" name="submit" id="submit">
        </form>
