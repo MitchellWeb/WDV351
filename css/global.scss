@@ -1,0 +1,128 @@
+body {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1000px;
+  }
+
+.collapse-icon {
+    display: none;
+    min-width: 50px;
+    max-width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: red;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 40px;
+    list-style-type: none;
+  }
+  main{
+    z-index: 0;
+    //background-color: aquamarine;
+    position: relative;
+    top: 15%;
+    
+    #mainImg{
+        width: 100%;
+    }
+  }
+  footer{
+    position: fixed;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    background-color: red;
+  }
+
+  #productDisplay{
+    width: 95%;
+    margin-left: auto ;
+    margin-right: auto;
+    margin-top: 20px;
+    //background-color: pink;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .product-card{
+        border: solid black 1px;
+        width: 25%;
+        height: fit-content;
+        min-height: 300px;
+        margin: 10px 0;
+        text-align: center;
+        img{
+            width: 100%;
+        }
+    }
+  }
+ #productsHeader
+ {
+    text-align: center;
+ }
+ #productSection{
+    img{
+        width: 25%;
+        margin: 20px 0;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+
+
+  @media only screen and (max-width: 1065px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 800px;
+    }
+    .collapse-icon {
+      display: block;
+    }
+    main{
+        top: 6%;
+    }
+    .nav-list {
+        display: none;
+        padding-inline-start: 0;
+        background-color: orange;
+        text-align: center;
+        width: 100%;
+      }
+      #productDisplay{
+        justify-content: space-between;
+        .product-card{
+            width: 45%;   
+        }
+      }
+
+      #productSection{
+        width: 100%;
+        img{
+            width: 75%;
+            margin: 20px 0;
+            box-shadow: 0 0 10px grey;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+      
+    
+      
+     
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../js/navbar.js"></script>
+    <script>
+        pageLoad = () =>
+        {
+            addCollapseControl();
+            window.onresize = checkWidth;
+
+            sendTo = (product) =>
+            {
+                sessionStorage.setItem("productName", product);
+            }
+
+            let mouseClick = document.querySelector("#mouse");
+            let screensaverClick = document.querySelector("#screensaver");
+            
+            mouseClick.onclick = () =>{
+                sendTo(mouseClick.id);
+            }
+            screensaverClick.onclick = () =>{
+                sendTo(screensaverClick.id)
+            }
+        }
+    </script>
+</head>
+<body onload="pageLoad()">
+    <header>
+        <nav>
+          <img class="collapse-icon" src="../images/menu-icon.png" alt=""><!--three line menu icon, hidden by default-->
+          <ul class="nav-list">
+            <a href="../index.html"><li>Home</li></a>
+            <a href="pages/products.html"><li>Products</li></a>
+            <a href="about.html"><li>About Us</li></a>
+            <a href="savedRecipes.html"><li id="savedRecipes">Cart</li></a>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="productsHeader">Products</h1>
+        <section id="productDisplay">
+            <div class="product-card" >
+                <img src="../images/screensaver.png" alt="">
+                <a id="screensaver" href="productView.html"><p>Mountain Lake Background</p></a>
+            </div>
+
+            <div class="product-card" >
+                <img src="../images/mouse.png" alt="">
+                <a id="mouse" href="productView.html"><p>Wireless Mouse</p></a><!--send the product category to local storage, load products based on category-->
+            </div>        
+        </section>
+    </main>
+    <footer>
+        <p>this is the footer</p>
+    </footer>
+</body>
+</html>

@@ -1,3 +1,4 @@
+<!--https://main.d1h5m0eyctweek.amplifyapp.com/-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/navbar.js"></script>
+    <script>
+        pageLoad = () =>
+        {
+            addCollapseControl();
+            window.onresize = checkWidth;
+
+        }
+    </script>
 </head>
-<body>
-    Purchase Successful
+<body onload="pageLoad()">
+    <header>
+        <nav>
+          <img class="collapse-icon" src="images/menu-icon.png" alt=""><!--three line menu icon, hidden by default-->
+          <ul class="nav-list">
+            <a href="index.html"><li>Home</li></a>
+            <a href="pages/products.html"><li>Products</li></a>
+            <a href="pages/about.html"><li>About Us</li></a>
+            <a href="savedRecipes.html"><li id="savedRecipes">Cart</li></a>
+          </ul>
+        </nav>
+    </header>
+    
+    <footer>
+        <p>this is the footer</p>
+    </footer>
 </body>
 </html>
