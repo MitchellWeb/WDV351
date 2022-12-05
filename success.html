@@ -8,12 +8,34 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/global.css">
     <script src="js/navbar.js"></script>
+    <style>
+        #download{
+            display: none;
+        }
+    </style>
     <script>
         pageLoad = () =>
         {
             addCollapseControl();
             window.onresize = checkWidth;
+            let valid = sessionStorage.getItem("valid");
+            
+            if(valid == 'false')
+            {   
+                location.replace('https://main.d1h5m0eyctweek.amplifyapp.com');
+            }
 
+            let product = sessionStorage.getItem("productName");
+            let productType = sessionStorage.getItem("productType");
+            let deliverySection = document.querySelector("#productDelivery");
+            let downloadButton = document.querySelector("#download")
+           
+            if(productType == "digital")
+            {
+                downloadButton.style.display = "block"
+                downloadButton.href = "images/";
+                downloadButton.download= product + ".jpg"
+            }
         }
     </script>
 </head>
@@ -29,7 +51,11 @@
           </ul>
         </nav>
     </header>
-    
+    <main>
+       <h1>Thank You for Your Purchase</h1>
+       <a id="download" href="images/" download="">Download Product Here</a>
+       <section id="productDelivery"></section>
+    </main>
     <footer>
         <p>this is the footer</p>
     </footer>

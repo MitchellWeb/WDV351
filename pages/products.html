@@ -10,6 +10,7 @@
     <script>
         pageLoad = () =>
         {
+            sessionStorage.setItem("valid", "false");
             addCollapseControl();
             window.onresize = checkWidth;
 
@@ -23,10 +24,13 @@
             
             mouseClick.onclick = () =>{
                 sendTo(mouseClick.id);
+                sessionStorage.setItem("productType", "physical");
             }
             screensaverClick.onclick = () =>{
                 sendTo(screensaverClick.id)
+                sessionStorage.setItem("productType", "digital");
             }
+            
         }
     </script>
 </head>

@@ -10,6 +10,7 @@
     <script>
         pageLoad = () =>
         {
+            sessionStorage.setItem("valid", "false");
             addCollapseControl();
             window.onresize = checkWidth;
 
@@ -35,6 +36,14 @@
            
             } 
             loadProduct();
+        
+            validateUser = () =>
+            {
+                sessionStorage.setItem("valid", "true");
+            }
+
+            let form = document.querySelector('form');
+            form.onclick = validateUser;
     }
     </script>
 </head>
