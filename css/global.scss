@@ -28,6 +28,10 @@ body {
     width: 100%;
     font-size: 40px;
     list-style-type: none;
+    a{
+      text-decoration: none;
+      color: white;
+    }
   }
   main{
     z-index: 0;
@@ -36,7 +40,7 @@ body {
     top: 15%;
     
     #mainImg{
-        width: 100%;
+        width: 50%;
     }
   }
   footer{
@@ -45,6 +49,7 @@ body {
     height: 75px;
     width: 100%;
     background-color: red;
+    text-align: center;
   }
 
   #productDisplay{
@@ -83,7 +88,7 @@ body {
     flex-direction: column;
     align-items: center;
  }
-
+ 
 
 
   @media only screen and (max-width: 1065px) {
@@ -98,11 +103,13 @@ body {
     }
     main{
         top: 6%;
+        #mainImg{
+          width: 100%;
+      }
     }
     .nav-list {
         display: none;
         padding-inline-start: 0;
-        background-color: orange;
         text-align: center;
         width: 100%;
       }
@@ -125,7 +132,15 @@ body {
         align-items: center;
      }
       
-    
+     #homepageContent{
+      p#mainText{
+        font-size: 25px;
+        width: 100%;
+      }
+      button{
+        font-size: 25px;
+    }
+  }
       
      
 }

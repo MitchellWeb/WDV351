@@ -19,8 +19,12 @@
         {
             addCollapseControl();
             window.onresize = checkWidth;
+            let productName = sessionStorage.getItem("product");
             let valid = sessionStorage.getItem("valid");
             
+            let productNamePlace = document.querySelector('#productName');
+            productNamePlace.innerHTML = productName;
+
             if(valid == 'false')
             {   
                 location.replace('https://main.d1h5m0eyctweek.amplifyapp.com');
@@ -39,6 +43,8 @@
                 downloadButton.style.display = "block"
                 downloadButton.href = "images/";
                 downloadButton.download= product + ".jpg"
+                let productNamePlace = document.querySelector('#productName');
+                productNamePlace.innerHTML = productName;
             }
         }
     </script>
@@ -51,13 +57,12 @@
             <a href="index.html"><li>Home</li></a>
             <a href="pages/products.html"><li>Products</li></a>
             <a href="pages/about.html"><li>About Us</li></a>
-            <a href="savedRecipes.html"><li id="savedRecipes">Cart</li></a>
           </ul>
         </nav>
     </header>
     <main>
-       <h1>Thank You for Your Purchase</h1>
-       <a id="download" href="images/" download="">Download Product Here</a>
+       <h1>Thank You for Your Purchase of <span id="productName"></span></h1>
+       <a id="download" href="images/" download="">Download <span id="productName"></span> Here</a>
        <section id="productDelivery"></section>
     </main>
     <footer>

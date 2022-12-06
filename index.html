@@ -9,6 +9,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
     <script src="js/navbar.js"></script>
+    <style>
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            font-size: 50px;
+        }
+        #homepageContent{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p#mainText{
+            font-size: 40px;
+            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
     <script>
         pageLoad = () =>
         {
@@ -26,13 +48,18 @@
             <a href="index.html"><li>Home</li></a>
             <a href="pages/products.html"><li>Products</li></a>
             <a href="pages/about.html"><li>About Us</li></a>
-            <a href="pages/contact.html"><li>Contact</li></a>
           </ul>
         </nav>
     </header>
-    
+    <main>
+        <img id="mainImg" src="images/main.jpg" alt="">
+        <section id="homepageContent">
+            <p id="mainText">We believe that everyone deserves comfort when at the computer. Whether you're gaming or working, at your desk or on your couch, we've got you covered. </p>
+            <a href="pages/products.html"><button>Browse Products</button></a>
+        </section>
+    </main>
     <footer>
-        <p>this is the footer</p>
+        <p>&copy; 2022 Poppin Peripherals</p>
     </footer>
 </body>
 </html>

@@ -32,6 +32,10 @@ ul {
   font-size: 40px;
   list-style-type: none;
 }
+ul a {
+  text-decoration: none;
+  color: white;
+}
 
 main {
   z-index: 0;
@@ -39,7 +43,7 @@ main {
   top: 15%;
 }
 main #mainImg {
-  width: 100%;
+  width: 50%;
 }
 
 footer {
@@ -48,6 +52,7 @@ footer {
   height: 75px;
   width: 100%;
   background-color: red;
+  text-align: center;
 }
 
 #productDisplay {
@@ -101,11 +106,13 @@ footer {
   main {
     top: 6%;
   }
+  main #mainImg {
+    width: 100%;
+  }
   .nav-list {
     display: none;
     -webkit-padding-start: 0;
             padding-inline-start: 0;
-    background-color: orange;
     text-align: center;
     width: 100%;
   }
@@ -125,5 +132,12 @@ footer {
     width: 75%;
     margin: 20px 0;
     box-shadow: 0 0 10px grey;
+  }
+  #homepageContent p#mainText {
+    font-size: 25px;
+    width: 100%;
+  }
+  #homepageContent button {
+    font-size: 25px;
   }
 }/*# sourceMappingURL=global.css.map */
