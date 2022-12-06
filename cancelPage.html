@@ -6,22 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cancel Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <script src="./js/navbar.js"></script>
+    <link rel="stylesheet" href="./css/global.css">
+    <script>
+      pageLoad = () =>
+      {
+          addCollapseControl();
+          window.onresize = checkWidth;
+          sessionStorage.setItem("valid", "false");
+      }
+  </script>
+  <style>
+    main > h1{
+      text-align: center;
+    }
+    main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <nav>
-          <img class="collapse-icon" src="images/menu-icon.png" alt=""><!--three line menu icon, hidden by default-->
-          <ul class="nav-list">
-            <a href="index.html"><li>Home</li></a>
-            <a href="pages/products.html"><li>Products</li></a>
-            <a href="pages/about.html"><li>About Us</li></a>
-          </ul>
-        </nav>
-    </header>
-    <h1>Order Cancelled</h1>
-    <a href="index.html"><button>Return To Home Page</button></a>
-    <footer>
+<body onload="pageLoad()">
+  <header>
+      <nav>
+        <img class="collapse-icon" src="images/menu-icon.png" alt=""><!--three line menu icon, hidden by default-->
+        <ul class="nav-list">
+          <a href="index.html"><li>Home</li></a>
+          <a href="pages/products.html"><li>Products</li></a>
+          <a href="pages/about.html"><li>About Us</li></a>
+        </ul>
+      </nav>
+  </header>
+  <main>
+      <h1>Your order has been cancelled.</h1>
+      <a href="index.html"><button>Return to the homepage</button></a>
+  </main>
+  <footer>
       <p>&copy; 2022 Poppin Peripherals</p>
   </footer>
 </body>
+</html>
 </html>

@@ -93,6 +93,10 @@ footer {
   margin: 20px 0;
 }
 
+#workstationImg {
+  width: 100%;
+}
+
 @media only screen and (max-width: 1065px) {
   body {
     display: flex;
@@ -139,5 +143,8 @@ footer {
   }
   #homepageContent button {
     font-size: 25px;
+  }
+  #workstationImg {
+    width: 100%;
   }
 }/*# sourceMappingURL=global.css.map */

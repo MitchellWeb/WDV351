@@ -88,7 +88,9 @@ body {
     flex-direction: column;
     align-items: center;
  }
- 
+ #workstationImg{
+  width: 100%;
+}
 
 
   @media only screen and (max-width: 1065px) {
@@ -141,6 +143,9 @@ body {
         font-size: 25px;
     }
   }
+  #workstationImg{
+    width: 100%;
+}
       
      
 }
