@@ -50,7 +50,7 @@
             if(productType == "digital")
             {
                 downloadButton.style.display = "block"
-                downloadButton.href = "images/";
+                downloadButton.href = "images/" + productName;
                 downloadButton.download= product + ".jpg"
                 let productNamePlace = document.querySelector('#productName');
                 productNamePlace.innerHTML = productName;
